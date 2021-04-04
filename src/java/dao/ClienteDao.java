@@ -37,5 +37,29 @@ public class ClienteDao {
         cli = this.jdbcTemplate.queryForList(sql);
         return cli;
     }
-        
+    
+    /**
+     *
+     * @return
+     */
+    public List mostrarCliente(){
+        List cli = new ArrayList();
+        this.jdbcTemplate = new JdbcTemplate(con.conectar());
+        String sql = "select * from cliente";
+        cli = this.jdbcTemplate.queryForList(sql);
+        return cli;
+    }
+    
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public List cargarClientesbyId(int id){
+        List cli = new ArrayList();
+        this.jdbcTemplate = new JdbcTemplate(con.conectar());
+        String sql = "select * from cliente where id_cli = " + id;
+        cli = this.jdbcTemplate.queryForList(sql);
+        return cli;
+    }       
 }

@@ -72,7 +72,7 @@ public class homeController {
      *
      * @return
      */
-        @RequestMapping(value="formConsultarCliente.htm", method=RequestMethod.GET)
+    @RequestMapping(value="formConsultarCliente.htm", method=RequestMethod.GET)
     public ModelAndView listarClientesxNombre(){
     ModelAndView mav = new ModelAndView();
     Cliente cliente = new Cliente();
@@ -100,13 +100,6 @@ public class homeController {
         mav.addObject("cliente",cliDao.consultarClienteByNombre(nom));
         mav.setViewName("views/listarClientes");
         return mav;
-/*          ModelAndView mav = new ModelAndView();
-        String sql = "select * from cliente";
-        List datos = this.jdbcTemplate.queryForList(sql)
-        mav.addObject("cliente",datos);
-        mav,setViewNAme("views/listarClientes");
-        return mav;
-        */
     }
 //------------------ metodo para agregar los datos del cliente ------------------    
 
@@ -194,7 +187,7 @@ public class homeController {
      * @return
      */
         @RequestMapping(value="actCliente.htm", method=RequestMethod.GET)
-    public ModelAndView actCliente(HttpServletRequest request){
+        public ModelAndView actCliente(HttpServletRequest request){
         ModelAndView mav = new ModelAndView();
         int id = Integer.parseInt(request.getParameter("id"));
         Cliente cli = this.cargarClientesbyId(id);
@@ -214,7 +207,7 @@ public class homeController {
      * @return
      */
         @RequestMapping(value="actCliente.htm", method=RequestMethod.POST)
-    public ModelAndView actCliente(
+        public ModelAndView actCliente(
             @ModelAttribute ("cliente") Cliente cli,
             BindingResult result,
             SessionStatus status
@@ -245,9 +238,9 @@ public class homeController {
      * @return
      */
         @RequestMapping("borrarCliente.htm")
-    public ModelAndView borrarCliente(HttpServletRequest request ){
-     ModelAndView mav = new ModelAndView();
-     int id = Integer.parseInt(request.getParameter("id"));
+        public ModelAndView borrarCliente(HttpServletRequest request ){
+        ModelAndView mav = new ModelAndView();
+        int id = Integer.parseInt(request.getParameter("id"));
         String sql = "delete from cliente where id_cli = ? ";
         this.jdbcTemplate.update(sql,id);
         mav.setViewName("redirect:/formCliente.htm");
@@ -284,7 +277,7 @@ public class homeController {
      *
      * @return
      */
-        @RequestMapping(value="listar.htm", method=RequestMethod.GET)
+    @RequestMapping(value="listar.htm", method=RequestMethod.GET)
     public ModelAndView listarClientesxId(){
     ModelAndView mav = new ModelAndView();
     Cliente cliente = new Cliente();

@@ -8,6 +8,7 @@
                 </div>
                 <div class="carb body">
                     <form:form commandName="cliente" method="post">
+                        <form:errors path="*" element="div" cssClass="alert alert-danger" />
                         <form:label path="nombre" cssClass="input-group-addon">Digite el Nombre: </form:label>
                         <form:input path="nombre" cssClass="form-control"></form:input>
 
@@ -27,9 +28,5 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer" >
-        <p>SENA 2021 @ Derechos Reservado </p>
-    </div>
     </body>
 </html>

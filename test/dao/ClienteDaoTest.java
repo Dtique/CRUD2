@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package dao;
 
 import java.util.List;
@@ -8,26 +12,36 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Diego T
+ */
 public class ClienteDaoTest {
-
-    @org.junit.BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @org.junit.Before
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.After
-    public void tearDown() throws Exception {
-    }
-
     
-    @org.junit.Test
+    public ClienteDaoTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of consultarClienteById method, of class ClienteDao.
+     */
+    @Test
     public void testConsultarClienteById() {
         System.out.println("consultarClienteById");
         int id = 0;
@@ -36,13 +50,13 @@ public class ClienteDaoTest {
         List result = instance.consultarClienteById(id);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of consultarClienteByNombre method, of class ClienteDao.
      */
-    @org.junit.Test
+    @Test
     public void testConsultarClienteByNombre() {
         System.out.println("consultarClienteByNombre");
         String nombre = "";
@@ -51,7 +65,36 @@ public class ClienteDaoTest {
         List result = instance.consultarClienteByNombre(nombre);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of mostrarCliente method, of class ClienteDao.
+     */
+    @Test
+    public void testMostrarCliente() {
+        System.out.println("mostrarCliente");
+        ClienteDao instance = new ClienteDao();
+        List expResult = instance.mostrarCliente();
+        List result = instance.mostrarCliente();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of cargarClientesbyId method, of class ClienteDao.
+     */
+    @Test
+    public void testCargarClientesbyId() {
+        System.out.println("cargarClientesbyId");
+        int id = 0;
+        ClienteDao instance = new ClienteDao();
+        List expResult = instance.cargarClientesbyId(id);
+        List result = instance.cargarClientesbyId(id);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     
 }
