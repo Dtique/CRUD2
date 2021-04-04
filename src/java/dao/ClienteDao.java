@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-/**
- *
- * @author Diego T
+/*
+ * @author Diego Tique
  */
 public class ClienteDao {
     JdbcTemplate jdbcTemplate;
     ConectarDB con = new ConectarDB();
     
     /**
-     *
-     * @param id
-     * @return
+     * @param id se utilizara en este metodo
+     * @return Lista cli con la informacion de la BD
      */
     public List consultarClienteById(int id){
         List cli = new ArrayList();
@@ -27,8 +25,8 @@ public class ClienteDao {
 
     /**
      *
-     * @param nombre
-     * @return
+     * @param nombre es por el cual realizaremos la consulta
+     * @return Lista cli con el resultado del nombre
      */
     public List consultarClienteByNombre(String nombre){
         List cli = new ArrayList();
@@ -40,7 +38,7 @@ public class ClienteDao {
     
     /**
      *
-     * @return
+     * @return Lista cli con todos los datos de la BD
      */
     public List mostrarCliente(){
         List cli = new ArrayList();
@@ -52,8 +50,8 @@ public class ClienteDao {
     
     /**
      *
-     * @param id
-     * @return
+     * @param id se utilizara para agregar un registro con su identificacion
+     * @return Lista cli de registros con una identificacion
      */
     public List cargarClientesbyId(int id){
         List cli = new ArrayList();

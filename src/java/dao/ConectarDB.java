@@ -3,15 +3,13 @@ package dao;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-/**
- *
- * @author Diego T
- */
+/* 
+* @author Diego Tique
+*/
 public class ConectarDB {
 
     /**
-     *
-     * @return
+     * @return La base de datos con la información requerida
      */
     public DriverManagerDataSource conectar (){
         DriverManagerDataSource datasource = new DriverManagerDataSource();

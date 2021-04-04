@@ -23,18 +23,22 @@ public class ClienteTest {
     
     @BeforeClass
     public static void setUpClass() {
+        System.out.println("Inicio test principal.");
     }
     
     @AfterClass
     public static void tearDownClass() {
+        System.out.println("Fin test principal.");
     }
     
     @Before
     public void setUp() {
+        System.out.println("Inicia test");
     }
     
     @After
     public void tearDown() {
+        System.out.println("Finaliza test");
     }
 
     /**

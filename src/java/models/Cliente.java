@@ -3,7 +3,7 @@ package models;
 
 /**
  *
- * @author Diego T
+ * @author Diego Tique
  */
 public class Cliente {
     private int id;
@@ -20,11 +20,11 @@ public class Cliente {
 
     /**
      *
-     * @param id
-     * @param nombre
-     * @param direccion
-     * @param correo
-     * @param telefono
+     * @param id para registrar,actualizar y borrar los datos
+     * @param nombre para registrar,actualizar y borrar los datos
+     * @param direccion para registrar,actualizar y borrar los datos
+     * @param correo para registrar,actualizar y borrar los datos
+     * @param telefono para registrar,actualizar y borrar los datos
      */
     public Cliente(int id, String nombre, String direccion, String correo, String telefono) {
         this.id = id;

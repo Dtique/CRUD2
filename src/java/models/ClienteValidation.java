@@ -5,7 +5,7 @@ import org.springframework.validation.Validator;
 
 /**
  *
- * @author Diego T
+ * @author Diego Tique
  */
 public class ClienteValidation implements Validator{
 

@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
- * @author Diego T
+ * @author Diego Tique
  */
 @Controller
 public class homeController {
@@ -40,7 +40,7 @@ public class homeController {
     
     /**
      *
-     * @return
+     * @return un formulario de ingreso
      */
     @RequestMapping(value="formCliente.htm", method=RequestMethod.GET)
     public ModelAndView home(){
@@ -53,7 +53,7 @@ public class homeController {
     
     /**
      *
-     * @return
+     * @return Lista con los datos de la BD
      */
     @RequestMapping(value="formCliente.htm", method=RequestMethod.POST)
     public ModelAndView mostrarCliente(){
@@ -70,7 +70,7 @@ public class homeController {
 
     /**
      *
-     * @return
+     * @return una vista con formulario para consultar por nombre
      */
     @RequestMapping(value="formConsultarCliente.htm", method=RequestMethod.GET)
     public ModelAndView listarClientesxNombre(){
@@ -83,10 +83,10 @@ public class homeController {
 
     /**
      *
-     * @param cli
-     * @param result
-     * @param status
-     * @return
+     * @param cli usado para enlazar 
+     * @param result para validar el resultado esperado 
+     * @param status si no hay errores limpiamos la session y redireccionamos
+     * @return Lista con el nombre requerido
      */
     @RequestMapping(value="formConsultarCliente.htm", method=RequestMethod.POST)
     public ModelAndView listarClientesxNombre(
@@ -105,7 +105,7 @@ public class homeController {
 
     /**
      *
-     * @return
+     * @return una vista para ingresar un nuevo registro
      */
         @RequestMapping(value="agregarCliente.htm", method=RequestMethod.GET)
     public ModelAndView cargarCliente(){
@@ -128,10 +128,10 @@ public class homeController {
 
     /**
      *
-     * @param cli
-     * @param result
-     * @param status
-     * @return
+     * @param cli usado para enlazar 
+     * @param result para validar el resultado esperado 
+     * @param status si no hay errores limpiamos la session y redireccionamos
+     * @return al formulario inicial
      */
         @RequestMapping(value="agregarCliente.htm", method=RequestMethod.POST)
     public ModelAndView agregarCliente(
@@ -183,8 +183,8 @@ public class homeController {
 
     /**
      *
-     * @param request
-     * @return
+     * @param request para propocionar la informacion registrada
+     * @return formulario con los datos para actualizar
      */
         @RequestMapping(value="actCliente.htm", method=RequestMethod.GET)
         public ModelAndView actCliente(HttpServletRequest request){
@@ -201,10 +201,10 @@ public class homeController {
 
     /**
      *
-     * @param cli
-     * @param result
-     * @param status
-     * @return
+     * @param cli usado para enlazar 
+     * @param result para validar el resultado esperado 
+     * @param status si no hay errores limpiamos la session y redireccionamos
+     * @return al formulario inicial
      */
         @RequestMapping(value="actCliente.htm", method=RequestMethod.POST)
         public ModelAndView actCliente(
@@ -234,8 +234,8 @@ public class homeController {
 
     /**
      *
-     * @param request
-     * @return
+     * @param request para propocionar la informacion registrada 
+     * @return formulario inicial
      */
         @RequestMapping("borrarCliente.htm")
         public ModelAndView borrarCliente(HttpServletRequest request ){
@@ -251,8 +251,8 @@ public class homeController {
 
     /**
      *
-     * @param id
-     * @return
+     * @param id por medio del cual tomamos los datos a actulizar
+     * @return los datos para actulizar
      */
         public Cliente cargarClientesbyId(int id){
         final Cliente cli = new Cliente();
@@ -275,7 +275,7 @@ public class homeController {
 
     /**
      *
-     * @return
+     * @return la lista de datos consultados
      */
     @RequestMapping(value="listar.htm", method=RequestMethod.GET)
     public ModelAndView listarClientesxId(){
