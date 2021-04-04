@@ -18,7 +18,7 @@
     -->
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
-            <props>
+            <props> 
                 <prop key="index.htm">indexController</prop>
                 <prop key="formCliente.htm" >controller</prop>
                 <prop key="mostrarCliente.htm" >controller</prop>
@@ -27,6 +27,7 @@
                 <prop key="borrarCliente.htm" >controller</prop>
                 <prop key="listarClientes.htm" >controller</prop>
                 <prop key="formConsultarCliente.htm" >controller</prop>
+                <prop key="allclasses-frame.htm" >controller</prop>
             </props>
         </property>
     </bean>
