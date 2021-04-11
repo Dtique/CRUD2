@@ -12,7 +12,7 @@
     <body>
     <nav>
         <h1 style="text-align: center; background-color: blanchedalmond;">Conectar JSP - JSTL - JDBC</h1>
-        <ul>       
+        <ul>  
             <li style="float:right;"><a href="index.htm">Index</a></li>
             <li><a href="formCliente.htm">Cliente</a></li>
             <li><a href="formConsultarCliente.htm">Vista Cliente</a></li>
